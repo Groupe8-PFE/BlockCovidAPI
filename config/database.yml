@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: testAPI_development
+  database: app-dev
   host: localhost
   username: user
   # The specified database role being used to connect to postgres.
