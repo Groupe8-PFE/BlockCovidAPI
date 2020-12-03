@@ -47,7 +47,6 @@ before_script:
 script:
   - puts 'Script'
 
-#HHHH
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
