@@ -47,6 +47,9 @@ before_script:
 script:
   #- prints 'Script'
 
+services:
+  - postgresql
+
 # configure notifications (email, IRC, campfire etc)
 notifications:
   email: "mzoughi-hedi@hotmail.com"
