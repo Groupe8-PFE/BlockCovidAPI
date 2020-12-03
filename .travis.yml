@@ -45,7 +45,7 @@ before_script:
 # use the $DB env variable to determine the phpunit.xml to use
 
 script:
-  - puts 'Script'
+  #- prints 'Script'
 
 
 # configure notifications (email, IRC, campfire etc)
