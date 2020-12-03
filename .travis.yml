@@ -1,8 +1,8 @@
 # see http://about.travis-ci.org/docs/user/languages/php/ for more hints
-language: php
+language: ruby
 
 # list any PHP version you want to test against
-php:
+ruby:
   # using major version aliases
 
   # aliased to 5.2.17
@@ -16,7 +16,7 @@ php:
   # aliased to a recent 5.6.x version
   #- 5.6
   # aliased to a recent 7.x version
-  - 7.0
+  - 2.7
   # aliased to a recent hhvm version
   #- hhvm
 
@@ -47,4 +47,4 @@ script:  echo "scripts" #phpunit --configuration phpunit_$DB.xml --coverage-text
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
-  email: "olivier.choquet@vinci.be"
+  email: "mzoughi-hedi@hotmail.com"
