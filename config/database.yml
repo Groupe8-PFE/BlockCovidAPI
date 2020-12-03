@@ -81,8 +81,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-#production:
-  #<<: *default
-  #database: d4u7udbgq4h0r4
-  #username: testAPI
-  #password: <%= ENV['TESTAPI_DATABASE_PASSWORD'] %>
+production:
+  <<: *default
+  database: d4u7udbgq4h0r4
+  username: testAPI
+  password: <%= ENV['TESTAPI_DATABASE_PASSWORD'] %>
