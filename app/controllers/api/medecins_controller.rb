@@ -1,7 +1,7 @@
 class Api::MedecinsController < ApplicationController
   # POST medecin
   def create
-    @medecin = Medecin.new(medecin_params)
+    @medecin = Medecin.create(medecin_params)
     if @medecin.save
       render json: @medecin
       puts(@medecin)
