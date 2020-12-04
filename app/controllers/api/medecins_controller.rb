@@ -9,7 +9,6 @@ class Api::MedecinsController < ApplicationController
     else
       render error: {error: 'Impossible de créer l\'utilisateur'}, status:400
       puts("Impossible de creer l'user")
-      printf("test echec")
     end
   end
 
