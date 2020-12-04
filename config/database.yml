@@ -23,10 +23,17 @@ default: &default
 
 development:
   <<: *default
-  database: d4u7udbgq4h0r4
-  host: ec2-34-248-165-3.eu-west-1.compute.amazonaws.com
-  username: mqtsvxtddqoigu
-  password: c53a715a70e3e9fd06aaa3e7e76abd5c5b03ad18b16beeaeb5e7e840818ebfde
+  
+  adapter: postgresql
+  host: localhost
+  username: user
+  database: app-dev
+  url: <%= ENV['DATABASE_URL'] %>
+
+  #database: d4u7udbgq4h0r4
+  #host: ec2-34-248-165-3.eu-west-1.compute.amazonaws.com
+  #username: mqtsvxtddqoigu
+  #password: c53a715a70e3e9fd06aaa3e7e76abd5c5b03ad18b16beeaeb5e7e840818ebfde
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
