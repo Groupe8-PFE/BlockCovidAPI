@@ -16,7 +16,7 @@ class Api::MedecinsController < ApplicationController
     private
 
     def medecin_params
-      params.require(:mededin).permit(:nom,:prenom,:inami,:mail,:telephone)
+      params.require(:medecins).permit(:nom,:prenom,:inami,:mail,:telephone)
     end
 
 

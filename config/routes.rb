@@ -3,9 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     get '/bears', to: 'bears#index'
     get '/users', to: 'users#index'
-    create '/medecins', to: 'medecins#index'
-    get '/medecins', to: 'medecins#index'
-    #resources :medecins, only: [:index, :create, :destroy, :update]
+    resources :medecins, only: [:index, :create, :destroy, :update]
   end
 
 
