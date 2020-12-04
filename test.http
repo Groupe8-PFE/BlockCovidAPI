@@ -5,7 +5,7 @@ Accept: application/json
 POST http://localhost:8000/api/medecins
 Content-Type: application/json
 
-{"nom":"hedi","prenom":"hedi","inami":45,"mail":"azer","telephone":"04876523"}
+{"nom":"hedi","prenom":"hedi","inami":45,"email":"azer@hotmail.com","telephone":"04876523"}
 
 ###
 
