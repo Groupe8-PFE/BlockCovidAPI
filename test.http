@@ -1,0 +1,11 @@
+GET http://localhost:8000/api/bears
+Accept: application/json
+
+###
+POST http://localhost:8000/api/medecins
+Content-Type: application/json
+
+{"nom":"hedi","prenom":"hedi","inami":45,"mail":"azer","telephone":"04876523"}
+
+###
+

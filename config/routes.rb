@@ -3,5 +3,11 @@ Rails.application.routes.draw do
   namespace :api do
     get '/bears', to: 'bears#index'
     get '/users', to: 'users#index'
+    resources :medecins, only: [:index, :create, :destroy, :update]
   end
+
+
+
+
 end
+
