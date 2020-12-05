@@ -12,6 +12,9 @@ gem 'puma', '~> 4.1'
 
 gem 'figaro'
 
+
+gem 'rack-cors'
+
 gem 'travis'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
