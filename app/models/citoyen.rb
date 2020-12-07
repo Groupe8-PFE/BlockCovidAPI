@@ -1,0 +1,2 @@
+class Citoyen < ApplicationRecord
+end

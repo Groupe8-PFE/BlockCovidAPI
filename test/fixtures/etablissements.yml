@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom_etablissement: MyString
+  mot_de_passe: MyString
+  adresse: 
+
+two:
+  nom_etablissement: MyString
+  mot_de_passe: MyString
+  adresse: 
