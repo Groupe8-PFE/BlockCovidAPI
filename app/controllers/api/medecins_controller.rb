@@ -6,6 +6,7 @@ class Api::MedecinsController < ApplicationController
     @medecin = Medecin.create(medecin_params)
     @medecin.adresse_id = @adresse.id
     if @medecin.save
+      login!
       render json: @medecin
       puts(@medecin)
       printf("test reussi")
@@ -15,7 +16,20 @@ class Api::MedecinsController < ApplicationController
     end
   end
 
-  # Get medecin
+
+  def show
+    @medecin = Medecin.find(params[:id])
+    if @medecin
+      render json: {
+          medecin: @medecin
+      }
+    else
+      render json: {
+          status: 500,
+          errors: ['medecin not found']
+      }
+    end
+  end
 
 
 

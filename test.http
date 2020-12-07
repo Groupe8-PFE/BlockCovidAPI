@@ -19,6 +19,16 @@ Content-Type: application/json
   "mot_de_passe_salt": "1234"
 
 }
+###
+
+POST http://localhost:8000/api/login
+Content-type: application/json
+
+{
+  "email": "azer@hotmail.com",
+  "mot_de_passe_hash": "1234"
+}
+
 
 
 
