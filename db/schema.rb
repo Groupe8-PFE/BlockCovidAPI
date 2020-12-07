@@ -67,10 +67,6 @@ ActiveRecord::Schema.define(version: 2020_12_07_110915) do
     t.index ["adresse_id"], name: "index_medecins_on_adresse_id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-  end
-
   add_foreign_key "citoyens", "adresses", column: "adresse_id"
   add_foreign_key "etablissements", "adresses", column: "adresse_id"
   add_foreign_key "lieus", "etablissements"
