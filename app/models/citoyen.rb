@@ -1,3 +1,3 @@
 class Citoyen < ApplicationRecord
-  has_one :adresse
+  belongs_to :adresse
 end

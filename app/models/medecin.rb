@@ -1,5 +1,5 @@
 class Medecin < ApplicationRecord
-  has_one :adresse
+  belongs_to :adresse
 
   attr_accessor :password
   validates :email, :presence => true, :uniqueness => true

@@ -1,5 +1,5 @@
 class Etablissement < ApplicationRecord
-  has_one :adresse
+  belongs_to :adresse
 
   attr_accessor :mot_de_passe
   validates :nom_etablissement, :presence => true, :uniqueness => true
