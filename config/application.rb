@@ -43,7 +43,7 @@ module TestAPI
         resource(
             '*',
             headers: :any,
-            methods: [:get, :patch, :put, :delete, :post, :options]
+            methods: [:get, :patch, :put, :show, :delete, :post, :options]
         )
       end
     end
