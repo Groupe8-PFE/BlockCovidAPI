@@ -1,9 +1,10 @@
 class Api::MedecinsController < ApplicationController
   # POST medecin
   def create
+
     @adresse = Adresse.create(adresse_params)
-    #@medecin = Medecin.create(medecin_params)
-    @medecin = @adresse.medecins.create(medecin_params)
+    @medecin = Medecin.create(medecin_params)
+    @medecin.adresse_id = @adresse.id
     if @medecin.save
       render json: @medecin
       puts(@medecin)
@@ -17,13 +18,13 @@ class Api::MedecinsController < ApplicationController
 
     private
 
-    def medecin_params
+    def medecin_params()
 
-      params.require(:medecin).permit(:nom,:prenom,:inami,:email, :mode_de_passe, :telephone)
+      params.permit(:nom,:prenom,:inami,:email, :telephone, :mot_de_passe_hash, :mot_de_passe_salt)
     end
 
     def adresse_params
-      params.require(:adresse).permit(:rue, :ville, :code_postal)
+      params.permit(:rue, :ville, :code_postal)
     end
 
 
