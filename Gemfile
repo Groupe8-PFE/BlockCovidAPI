@@ -13,7 +13,6 @@ gem 'puma', '~> 4.1'
 gem 'figaro'
 
 
-gem 'bcrypt'
 
 gem 'rack-cors'
 

@@ -15,6 +15,9 @@ class Api::MedecinsController < ApplicationController
     end
   end
 
+  # Get medecin
+
+
 
     private
 
