@@ -1,5 +1,5 @@
 class Adresse < ApplicationRecord
-  has_one :medecin
-  has_one :etablissement
-  has_one :citoyen
+  has_many :medecin
+  has_many :etablissement
+  has_many :citoyen
 end
