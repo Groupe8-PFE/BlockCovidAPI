@@ -14,6 +14,7 @@ class Api::LoginMedecinController < ApplicationController
   def persist
     if request.headers['Authorization']
       encoded_token = request.headers['Authorization'].split(' ')[1]
+      puts encoded_token
       token = JWT.decode(encoded_token, "test")
       medecin_id = token[0]['medecin_id']
       medecin = Medecin.find(medecin_id)
@@ -24,7 +25,7 @@ class Api::LoginMedecinController < ApplicationController
   private
 
   def login_params
-    params.permit(:login_medecin,:email, :password)
+    params.permit(:email, :password)
   end
 end
 
