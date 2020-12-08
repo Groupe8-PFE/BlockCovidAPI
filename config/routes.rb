@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :etablissements, only: [:index, :create, :show, :destroy, :update] do
       resources :lieus, only: [:index, :create, :show, :destroy, :update]
     end
+    resources :citoyens, only: [:create, :show]
     post '/loginMedecin', to: 'login_medecin#login'
     get '/authMedecin', to: 'login_medecin#persist'
     post '/loginEtablissement', to: 'login_etablissement#login'
@@ -14,4 +15,3 @@ Rails.application.routes.draw do
   end
 
 end
-

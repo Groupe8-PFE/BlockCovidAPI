@@ -1,3 +1,15 @@
+GET http://localhost:8000/api/citoyens/1
+Accept: application/json
+
+###
+POST http://localhost:8000/api/citoyens
+Content-Type: application/json
+
+{
+}
+
+###
+
 GET http://localhost:8000/api/etablissements/3/lieus
 Accept: application/json
 
@@ -30,10 +42,13 @@ POST http://localhost:8000/api/etablissements
 Content-Type: application/json
 
 {
-  "nom_etablissement": "resto sprl",
+  "nom_etablissement": "hotel sa",
   "password": "1234",
-  "email": "resto@hotmail.com",
-  "telephone": "0483659044"
+  "email": "hoteleu@hotmail.com",
+  "telephone": "0483659044",
+  "rue": "avenue de vrs",
+  "ville": "Bruxelles",
+  "code_postal": 1120
 }
 
 ###

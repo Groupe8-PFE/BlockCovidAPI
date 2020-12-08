@@ -1,3 +1,3 @@
 class Citoyen < ApplicationRecord
-  belongs_to :adresse
+  belongs_to :adresse, optional: true
 end
