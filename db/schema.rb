@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_07_110915) do
+ActiveRecord::Schema.define(version: 2020_12_08_091308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,11 +36,10 @@ ActiveRecord::Schema.define(version: 2020_12_07_110915) do
 
   create_table "etablissements", force: :cascade do |t|
     t.string "nom_etablissement"
-    t.string "mot_de_passe_hash"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "adresse_id"
-    t.string "mot_de_passe_salt"
+    t.string "password_digest"
     t.index ["adresse_id"], name: "index_etablissements_on_adresse_id"
   end
 
@@ -62,8 +61,7 @@ ActiveRecord::Schema.define(version: 2020_12_07_110915) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "adresse_id"
-    t.string "mot_de_passe_hash"
-    t.string "mot_de_passe_salt"
+    t.string "password_digest"
     t.index ["adresse_id"], name: "index_medecins_on_adresse_id"
   end
 
