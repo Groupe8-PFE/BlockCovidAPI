@@ -6,13 +6,12 @@ class Api::MedecinsController < ApplicationController
     @medecin = Medecin.create(medecin_params)
     @medecin.adresse_id = @adresse.id
     if @medecin.save
-      login!
+      token = JWT.encode({medecin_id: @medecin.id},"test","HS256")
       render json: @medecin
       puts(@medecin)
       printf("test reussi")
     else
-      render error: {error: 'Impossible de créer l\'utilisateur'}, status:400
-      puts("Impossible de creer l'user")
+      render json: {errors: @medecin.errors.full_messages}
     end
   end
 
@@ -37,7 +36,7 @@ class Api::MedecinsController < ApplicationController
 
     def medecin_params()
 
-      params.permit(:nom,:prenom,:inami,:email, :telephone, :mot_de_passe_hash, :mot_de_passe_salt)
+      params.permit(:nom,:prenom,:inami,:email, :telephone, :password)
     end
 
     def adresse_params

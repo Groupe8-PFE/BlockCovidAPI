@@ -1,3 +1,9 @@
+
+GET http://localhost:8000/api/auth
+Accept: application/json
+Authorization: Basic eyJhbGciOiJIUzI1NiJ9.eyJtZWRlY2luX2lkIjoyN30.kw3TE32z2xyhrZi_ro9DU_BIfU2toGt4t6AfzwC6UhM
+
+###
 GET http://localhost:8000/api/bears
 Accept: application/json
 
@@ -9,14 +15,13 @@ Content-Type: application/json
   "nom": "Mz",
   "prenom": "hedi",
   "inami": 45,
-  "email": "azer@hotmail.com",
+  "email": "azerty@hotmail.com",
   "telephone": "04876523",
   "adresse_id": "1",
   "rue": "avenue de vrs",
   "ville": "Bruxelles",
   "code_postal": 1120,
-  "mot_de_passe_hash": "1234",
-  "mot_de_passe_salt": "1234"
+  "password": "1234"
 
 }
 ###
@@ -26,7 +31,7 @@ Content-type: application/json
 
 {
   "email": "azer@hotmail.com",
-  "mot_de_passe_hash": "1234"
+  "password": "1234"
 }
 
 

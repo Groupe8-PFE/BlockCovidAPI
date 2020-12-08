@@ -1,6 +1,6 @@
 class Medecin < ApplicationRecord
   belongs_to :adresse
-
+  has_secure_password
   #attr_accessor :password
   #validates :email, :presence => true, :uniqueness => true
   #before_save :encrypt_password

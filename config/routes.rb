@@ -3,14 +3,10 @@ Rails.application.routes.draw do
   namespace :api do
     get '/bears', to: 'bears#index'
     get '/users', to: 'users#index'
-    post '/login',    to: 'sessions#create'
-    post '/logout',   to: 'sessions#destroy'
-    get '/logged_in', to: 'sessions#is_logged_in?'
     resources :medecins, only: [:index, :create, :show, :destroy, :update]
-    #resources :sessions, only: [:new, :create, :destroy]
-
-
-
+    post '/login', to: 'login_medecin#login'
+    get '/auth', to: 'login_medecin#persist'
   end
+
 end
 

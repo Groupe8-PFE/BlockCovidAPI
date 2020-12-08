@@ -12,6 +12,7 @@ gem 'puma', '~> 4.1'
 
 gem 'figaro'
 
+gem 'jwt'
 
 
 gem 'rack-cors'
