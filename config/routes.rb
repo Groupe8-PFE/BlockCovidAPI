@@ -4,8 +4,13 @@ Rails.application.routes.draw do
     get '/bears', to: 'bears#index'
     get '/users', to: 'users#index'
     resources :medecins, only: [:index, :create, :show, :destroy, :update]
-    post '/login', to: 'login_medecin#login'
-    get '/auth', to: 'login_medecin#persist'
+    resources :etablissements, only: [:index, :create, :show, :destroy, :update] do
+      resources :lieus, only: [:index, :create, :show, :destroy, :update]
+    end
+    post '/loginMedecin', to: 'login_medecin#login'
+    get '/authMedecin', to: 'login_medecin#persist'
+    post '/loginEtablissement', to: 'login_etablissement#login'
+    get '/authEtablissement', to: 'login_etablissement#persist'
   end
 
 end

@@ -5,7 +5,7 @@ class Api::MedecinsController < ApplicationController
     @adresse = Adresse.create(adresse_params)
     @medecin = Medecin.create(medecin_params)
     @medecin.adresse_id = @adresse.id
-    if @medecin.save
+    if @medecin.save && @medecin.valid?
       token = JWT.encode({medecin_id: @medecin.id},"test","HS256")
       render json: @medecin
       puts(@medecin)

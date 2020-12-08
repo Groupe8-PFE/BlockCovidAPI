@@ -1,6 +1,8 @@
 class Etablissement < ApplicationRecord
   belongs_to :adresse
-
+  has_secure_password
+  validates :email, uniqueness: true
+  has_many :lieus
   #attr_accessor :mot_de_passe
   #validates :nom_etablissement, :presence => true, :uniqueness => true
   #before_save :encrypt_password
