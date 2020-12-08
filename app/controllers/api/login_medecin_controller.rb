@@ -1,5 +1,5 @@
 
-class LoginMedecinsController < ApplicationController
+class  Api::LoginMedecinsController < ApplicationController
   # "log the medecin in"
   def create
     puts 'recherche...'
