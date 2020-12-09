@@ -1,5 +1,6 @@
 class Medecin < ApplicationRecord
   belongs_to :adresse
+  has_many :scan_medecins
   has_secure_password
   validates :email, uniqueness: true
   #attr_accessor :password

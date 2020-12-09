@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_08_115540) do
+ActiveRecord::Schema.define(version: 2020_12_09_091833) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,8 +67,30 @@ ActiveRecord::Schema.define(version: 2020_12_08_115540) do
     t.index ["adresse_id"], name: "index_medecins_on_adresse_id"
   end
 
+  create_table "scan_lieus", force: :cascade do |t|
+    t.bigint "lieu_id", null: false
+    t.bigint "citoyen_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["citoyen_id"], name: "index_scan_lieus_on_citoyen_id"
+    t.index ["lieu_id"], name: "index_scan_lieus_on_lieu_id"
+  end
+
+  create_table "scan_medecins", force: :cascade do |t|
+    t.bigint "medecin_id", null: false
+    t.bigint "citoyen_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["citoyen_id"], name: "index_scan_medecins_on_citoyen_id"
+    t.index ["medecin_id"], name: "index_scan_medecins_on_medecin_id"
+  end
+
   add_foreign_key "citoyens", "adresses", column: "adresse_id"
   add_foreign_key "etablissements", "adresses", column: "adresse_id"
   add_foreign_key "lieus", "etablissements"
   add_foreign_key "medecins", "adresses", column: "adresse_id"
+  add_foreign_key "scan_lieus", "citoyens"
+  add_foreign_key "scan_lieus", "lieus"
+  add_foreign_key "scan_medecins", "citoyens"
+  add_foreign_key "scan_medecins", "medecins"
 end
