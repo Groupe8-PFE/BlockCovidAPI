@@ -21,6 +21,7 @@ class Api::EtablissementsController < ApplicationController
     if @etablissement
       render json: {
           etablissement: @etablissement
+
       }
     else
       render json: {

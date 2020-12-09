@@ -4,9 +4,12 @@ Rails.application.routes.draw do
     get '/bears', to: 'bears#index'
     get '/users', to: 'users#index'
     resources :medecins, only: [:index, :create, :show, :destroy, :update]
+
     resources :etablissements, only: [:index, :create, :show, :destroy, :update] do
       resources :lieus, only: [:index, :create, :show, :destroy, :update]
     end
+    resources :scan_lieus, only: [:create]
+    resources :scan_medecins, only: [:create]
     resources :citoyens, only: [:create, :show]
     post '/loginMedecin', to: 'login_medecin#login'
     get '/authMedecin', to: 'login_medecin#persist'

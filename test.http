@@ -1,3 +1,12 @@
+POST http://localhost:8000/api/scan_medecins
+Content-Type: application/json
+
+{
+  "medecin_id" : "30",
+  "citoyen_id" : "1"
+}
+
+###
 GET http://localhost:8000/api/citoyens/1
 Accept: application/json
 
@@ -6,6 +15,7 @@ POST http://localhost:8000/api/citoyens
 Content-Type: application/json
 
 {
+
 }
 
 ###
