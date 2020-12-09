@@ -30,7 +30,7 @@ class Api::LieusController < ApplicationController
     )
     if @lieu
       render json: {
-          medecin: @lieu,
+          lieu: @lieu,
           svg: @svg
       }
     else
