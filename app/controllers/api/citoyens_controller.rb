@@ -1,6 +1,6 @@
 class Api::CitoyensController < ApplicationController
   def create
-    @citoyen = Citoyen.create()
+    @citoyen = Citoyen.create(citoyen_params)
     if @citoyen.save
       render json: @citoyen
     else
@@ -15,7 +15,7 @@ class Api::CitoyensController < ApplicationController
   private
 
   def citoyen_params
-    params.require(:citoyen).permit(:nom,:prenom,:email,:telephone)
+    params.require(:citoyen).permit(:device_id)
   end
 
 end
