@@ -8,7 +8,7 @@ class Api::CitoyensController < ApplicationController
     end
   end
   def show
-    @citoyen = Citoyen.where(device_id: params[:device_id])
+    @citoyen = Citoyen.where(device_id: params[:id])
     render json: @citoyen
   end
 
