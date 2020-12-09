@@ -1,6 +1,7 @@
 class Api::MedecinsController < ApplicationController
   # POST medecin
   require 'rqrcode'
+  require 'json'
   def create
 
     @adresse = Adresse.create(adresse_params)
@@ -20,8 +21,8 @@ class Api::MedecinsController < ApplicationController
   def show
 
     @medecin = Medecin.find(params[:id])
-    @infos = {id:@medecin.id,role:'Medecin'}
-    @qrcode = RQRCode::QRCode.new(@infos)
+    @infos = {:id=>@medecin.id, :role=>'Medecin'}
+    @qrcode = RQRCode::QRCode.new(@infos.to_json)
 
     @svg = @qrcode.as_svg(
         offset: 0,

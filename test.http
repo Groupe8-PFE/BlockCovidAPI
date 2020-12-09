@@ -1,3 +1,11 @@
+
+###
+
+
+GET http://localhost:8000/api/medecins/30
+Accept: application/json
+
+###
 POST http://localhost:8000/api/scan_medecins
 Content-Type: application/json
 
