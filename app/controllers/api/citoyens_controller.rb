@@ -15,7 +15,7 @@ class Api::CitoyensController < ApplicationController
   private
 
   def citoyen_params
-    params.require(:citoyen).permit(:device_id)
+    params.require(:citoyen).permit(:device_id, :token_device)
   end
 
 end

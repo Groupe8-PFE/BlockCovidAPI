@@ -27,7 +27,8 @@ POST http://localhost:8000/api/citoyens
 Content-Type: application/json
 
 {
-   "device_id" :"err"
+   "device_id" :"err",
+   "token_device" : "test"
 }
 
 ###
