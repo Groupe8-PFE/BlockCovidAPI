@@ -14,8 +14,10 @@ gem 'figaro'
 
 gem 'rqrcode'
 
-gem 'jwt'
 
+gem 'exponent-server-sdk'
+
+gem 'jwt'
 
 gem 'rack-cors'
 
