@@ -30,7 +30,7 @@ class Api::ScanMedecinsController < ApplicationController
     messages = [{
                     to: token_device,
                     sound: "default",
-                    body: "Hello world!"
+                    body: "Vous avez été en contact avec une personne infectée"
                 }]
 
     # @Deprecated
