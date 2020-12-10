@@ -1,3 +1,12 @@
+POST http://localhost:8000/api/scan_lieus
+Content-Type: application/json
+
+{
+  "lieu_id" : "11",
+  "device_id" : "25a47526-7092-4a39-9506-96780fd986c4"
+}
+
+###
 GET http://localhost:8000/api/etablissements/3/lieus/3
 Accept: application/json
 
@@ -16,6 +25,16 @@ Content-Type: application/json
 {
   "medecin_id" : "30",
   "device_id" : "err"
+}
+
+###
+
+POST https://blockcovid-api.herokuapp.com/api/scan_medecins
+Content-Type: application/json
+
+{
+"medecin_id" : "30",
+"device_id" : "err"
 }
 
 ###

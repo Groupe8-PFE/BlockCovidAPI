@@ -15,7 +15,7 @@ gem 'figaro'
 gem 'rqrcode'
 
 
-gem 'exponent-server-sdk'
+#gem 'exponent-server-sdk'
 
 gem 'jwt'
 
