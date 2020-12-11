@@ -11,7 +11,6 @@ class Api::MedecinsController < ApplicationController
       token = JWT.encode({medecin_id: @medecin.id},"test","HS256")
       render json: @medecin
       puts(@medecin)
-      printf("test reussi")
     else
       render json: {errors: @medecin.errors.full_messages}
     end
@@ -42,8 +41,6 @@ class Api::MedecinsController < ApplicationController
       }
     end
   end
-
-
 
     private
 

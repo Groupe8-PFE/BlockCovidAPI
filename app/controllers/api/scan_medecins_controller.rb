@@ -16,7 +16,6 @@ class Api::ScanMedecinsController < ApplicationController
     else
       render json: {errors: @scan_medecin.errors.full_messages}
     end
-
   end
 
   private
@@ -26,11 +25,10 @@ class Api::ScanMedecinsController < ApplicationController
 
   def envoyer_notification(token_device)
     client = Exponent::Push::Client.new
-    # client = Exponent::Push::Client.new(gzip: true)  # for compressed, faster requests
     messages = [{
                     to: token_device,
                     sound: "default",
-                    body: "Vous avez été en contact avec une personne infectée"
+                    body: "Vous avez été en contact avec une personne infectée !!"
                 }]
 
     # @Deprecated

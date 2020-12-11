@@ -9,7 +9,6 @@ class Api::EtablissementsController < ApplicationController
       token = JWT.encode({etablissement_id: @etablissement.id},"test","HS256")
       render json: @etablissement
       puts(@etablissement)
-      printf("test reussi")
     else
       render json: {errors: @etablissement.errors.full_messages}
     end
